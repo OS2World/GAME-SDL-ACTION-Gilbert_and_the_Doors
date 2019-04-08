@@ -1,0 +1,18 @@
+DEPENDENCY
+----------
+0-STANDARD Libc (With GCC)
+1-LIBSDL1.2
+2-LIBSDL_mixer1.2
+3-MATH
+
+
+libsdl1.2
+---------
+sudo apt-get update
+sudo apt-get install libsdl1.2-dev libsdl-mixer1.2-dev
+
+Compile with command line on linux terminal:
+gcc -o Gilbert Gilbert.c Widjet.c MoteurDeJeu.c -lm -lSDL_mixer  `sdl-config --libs --cflags`
+
+Compile with (GEANY) on linux:
+gcc -Wall -o  "%e" "%f" -no-pie Widjet.c MoteurDeJeu.c -lm -lSDL_mixer  -lSDL
